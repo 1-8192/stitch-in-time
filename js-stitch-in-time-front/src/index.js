@@ -1,33 +1,42 @@
-function preload() {
-  // loadFont('fonts/vd.ttf');
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+  const containerTag = document.querySelector('#main-container')
+  const divTag = document.createElement("DIV");
+  let imgTag = document.querySelector('.center-fit')
+  containerTag.appendChild(divTag)
+  divTag.className = 'greeting'
+  divTag.innerHTML = `<p>Welcome</p>
+  <input type="text">Hi! What's your name?</input>
+  <input id="start-btn" type="button" value="Let's Read!"></input>`
+  
+  document.querySelector('#start-btn').addEventListener('click', (e) => {
+    if (e.target.previousElementSibling.value != "") {
+      // set username = value
+      imgTag.src = "./images/a-stitch-in-time_2.png"
+      fetch('http://localhost:3000/users', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accepted: "application/json"
+        },
+        body: JSON.stringify({
+          "name": `${e.target.previousElementSibling.value}`,
+          "progress": 0
+        })
+      }) // end of fetch
+    }
+  })
 
-function setup() {
-  cnv = createCanvas(window.innerWidth, window.innerHeight);
-  img = loadImage('./images/cover.png');
-  textSize(36);
-  textFont('./fonts/vd.ttf');
-  textStyle('BOLD');
-  y = height;
-  nextButton = createButton('click here');
-  nextButton.mousePressed(changeBg);
 
-}
+}) // end of DOMContentLoaded
 
-function draw() {
-  // Displays the image at its actual size at point (0,0)
-  bg = background(img, 0, 0, width, height);
 
-  //Welcome message
-  if (y > 200) {
-    y = y - 1
-  }
-  fill(59, 70, 73);
-  intro = text("Hi there. Welcome to A Stitch in Time, a digital storybook based on the book by Himradi Das and Veena Prasad. Illustrations by Ankitha Kini", 200, y, 800, 300);
-}
 
-function changeBg() {
-  img = loadImage('./images/a-stitch-in-time_2.png')
-  bg = background(img, 0, 0, width, height);
-  intro = text("")
-}
+
+
+
+
+
+
+
+
+
