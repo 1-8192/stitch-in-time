@@ -1,65 +1,42 @@
-let userName;
-let pageCount = 2;
-let welcomeButton;
-let signIn;
+document.addEventListener('DOMContentLoaded', (event) => {
+  const containerTag = document.querySelector('#main-container')
+  const divTag = document.createElement("DIV");
+  let imgTag = document.querySelector('.center-fit')
+  containerTag.appendChild(divTag)
+  divTag.className = 'greeting'
+  divTag.innerHTML = `<p>Welcome</p>
+  <input type="text">Hi! What's your name?</input>
+  <input id="start-btn" type="button" value="Let's Read!"></input>`
+  
+  document.querySelector('#start-btn').addEventListener('click', (e) => {
+    if (e.target.previousElementSibling.value != "") {
+      // set username = value
+      imgTag.src = "./images/a-stitch-in-time_2.png"
+      fetch('http://localhost:3000/users', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accepted: "application/json"
+        },
+        body: JSON.stringify({
+          "name": `${e.target.previousElementSibling.value}`,
+          "progress": 0
+        })
+      }) // end of fetch
+    }
+  })
 
-function preload() {
-  // loadFont('fonts/vd.ttf');
-}
 
-function setup() {
-  cnv = createCanvas(window.innerWidth, window.innerHeight);
-  img = loadImage('./images/cover.png');
-  textSize(36);
-  textFont('./fonts/vd.ttf');
-  textStyle('BOLD');
-  //height for text scrolling
-  y = height;
-  //button to click next
-  // welcomeButton = createButton('Start reading');
-  // welcomeButton.position(600,300);
-  // welcomeButton.mousePressed(changeBg);
-  // //input button for user name
-  //
-  // let signIn = createInput("Hi, what's your name?");
-  // signIn.position(450, 300)
-  // signIn.input(myInputEvent);
+}) // end of DOMContentLoaded
 
-}
 
-function draw() {
-  // Displays the image at its actual size at point (0,0)
-  bg = background(img, 0, 0, width, height);
 
-  //Welcome message
-  if (y > 150) {
-    y = y - 5
-  }
-  fill(59, 70, 73);
-  if (pageCount === 2) {
-  intro = text("Hi there. Welcome to A Stitch in Time, a digital storybook based on the book by Himradi Das and Veena Prasad. Illustrations by Ankitha Kini", 200, y, 800, 300);
-};
 
-  if (pageCount === 2) {
-    welcomeButton = createButton('Start reading');
-    welcomeButton.position(600,300);
-    welcomeButton.mouseClicked(changeBg(pageCount));
-    //input button for user name
 
-    let signIn = createInput("Hi, what's your name?");
-    signIn.position(450, 300)
-    signIn.input(myInputEvent);
-  }
-}
 
-//interactivity functions
-function myInputEvent() {
-  userName = this.value();
-};
 
-function changeBg(count) {
-  img = loadImage(`./images/a-stitch-in-time_${pageCount}.png`)
-  bg = background(img, 0, 0, width, height);
-  removeElements();
-  pageCount ++;
-};
+
+
+
+
+
