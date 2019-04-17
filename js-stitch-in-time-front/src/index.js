@@ -39,9 +39,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return response.json();
       }).then((user) => {
         currentUser = user;
+        if (currentUser.progress === 0) {
+        currentUser.progress = 11;
+        };
         document.querySelector('.greeting').remove();
 
-        PageAdapter.getPage(11)
+        PageAdapter.getPage(currentUser.progress)
           .then((pageInfo) => {
             let currentPage = new Page(pageInfo);
             document.querySelector('.center-fit').src = currentPage.imageUrl;
