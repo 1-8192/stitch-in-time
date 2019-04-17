@@ -17,35 +17,36 @@ Page.create(image_url: "./images/8.png", top_text: '"What\'s wrong?" asks Shyam.
 Page.create(image_url: "./images/9.png", top_text: 'Before Shyam\'s parents can ask them about the iron box,', bottom_text: 'He and Shrisha take it and sneak out on their cycles to the Repair Mela.')
 Page.create(image_url: "./images/10.png", top_text: '"Aunty, can you help us repair this iron box?" Shrisha asks Anupama Aunty. "What\'s wrong with it?" "It won\'t switch on!" says Shrisha.', bottom_text: 'Anupama Aunty takes out a little box with wires and knobs. "This is a multimeter," she says. "It checks if all parts of the iron are allowing electric current to flow. Let\'s start wth the plug."')
 Page.create(image_url: "./images/11.png", top_text: 'Next, she tests all the other parts, until she comes to a small wire.', bottom_text: '" See this wire next to the plug? It\'s broken, even though it doesn\'t look damaged-there\'s your problem!"')
-Page.new(image_url: './images/12.png',
+Page.create(image_url: './images/12.png',
          top_text: 'She cuts out the old wire and plug, and fixes a new wire and plug to the iron box.',
          bottom_text: '"Let\'s test it." She switches it on, and the light glows.')
-Page.new(image_url: './images/13.png',
-         bottom_text: 'After helping out at the mela and observing repairs for a while, they deciede to head home.')
-Page.new(image_url: './images/14.png',
+Page.create(image_url: './images/13.png',
+         top_text: "",
+         bottom_text: 'After helping out at the mela and observing repairs for a while, they decide to head home.')
+Page.create(image_url: './images/14.png',
          top_text: '"Oh no, the rear tyre has a puncture. Let\'s take it to the Manigandan Anna!" says Shrisha.',
          bottom_text: '"Puncture? No problem," says Manigandan Anna, who has a small cycle repair shop in the neighbourhood. He has been invited to the Repair Mela.')
-Page.new(image_url: './images/15.png',
+Page.create(image_url: './images/15.png',
          top_text: 'He turns the cycle upside down. He takes a pair of tyre levers and pries the tyre away from the metal rim. Soon the inner tube is out.',
          bottom_text: '"Can you see a hole anywhere?" Anna asks the children. They can\'t. "Then how do you tell where the puncture is?" he asks. The children look at him cluelessly.')
-Page.new(image_url: './images/16.png',
+Page.create(image_url: './images/16.png',
          top_text: "He immerses the tube, part by part, in a tub half-filled with water. At one point, they see small bubbles rising. \"See? That's where the hole is!\"",
          bottom_text: 'He cuts a small piece of rubber from an old tube. After rubbing the surface of the tube around the hole with sandpaper, he applies a rubber adhesive to the tube and the piece of rubber.')
-Page.new(image_url: './images/17.png',
+Page.create(image_url: './images/17.png',
          top_text: '"Come, seal this," he says. Shyam puts the piece of rubber on the hole and presses it down.',
          bottom_text: '"If not for the professionals who fix cycles, umbrellas, footwear and other things, we would have mountains of waste all over!" says Shyam.')
-Page.new(image_url: './images/18.png',
+Page.create(image_url: './images/18.png',
          top_text: 'The tyre is fixed, the iron is fixed, and Shrisha and Shyam ride back home.',
          bottom_text: 'It is a day well spent!')
-Page.new(image_url: './images/19.png',
+Page.create(image_url: './images/19.png',
          top_text: 'There is an urgent need to decrease the amount of non-biodegradable waste that humans generate. Repair encourages a more efficient use of resources than the take, make and waste culture that is replacing our traditional way of make, preserve and reuse.',
          bottom_text: "Don't throw it. Fix it")
-Page.new(image_url: './images/20.png',
+Page.create(image_url: './images/20.png',
          top_text: 'Raw materials used in products often need a lot of energy to be mined and processed to make them usable by manufacturers. The process of repair helps conserve these resources and extends the life of the product.',
          bottom_text: 'Only when something cannot be repaired should you think of recycling it.')
-Page.new(image_url: './images/21.png',
+Page.create(image_url: './images/21.png',
          top_text: 'The Tradition of recycling',
          bottom_text: 'In India, we have a strong tradition of recycling, whether it is organic waste like food or inorganic waste like clothes. While their nmbers have reduced greatly, we still find kabadiwalas who collect old newspaper and recyclable household metal and plastic waste, and street peddlers who taske in your old clothes in return for new steel utensils.')
-Page.new(image_url: './images/22.png',
+Page.create(image_url: './images/22.png',
          top_text: 'Have you used any of these tools?',
          bottom_text: 'If not, get someone to teach you to use them. This is a very useful skill to have.')

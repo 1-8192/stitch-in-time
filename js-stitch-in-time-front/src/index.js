@@ -39,9 +39,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return response.json();
       }).then((user) => {
         currentUser = user;
+        if (currentUser.progress === 0) {
+          currentUser.progress = 32;
+        }
         document.querySelector('.greeting').remove();
 
-        PageAdapter.getPage(11)
+        PageAdapter.getPage(currentUser.progress)
           .then((pageInfo) => {
             let currentPage = new Page(pageInfo);
             document.querySelector('.center-fit').src = currentPage.imageUrl;
@@ -55,6 +58,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
         nxtbtn.src = "./images/recycle-btn.png"
         nxtbtn.type = "image";
         document.querySelector('#main-container').appendChild(nxtbtn);
+
+        nxtbtn.addEventListener('click', (event) => {
+          if (currentUser.progress === 52) {
+            topDivText("Thanks for reading!");
+            bottomDivText("");
+            nxtbtn.remove();
+          } else {
+            currentUser.progress += 1;
+            topDivText("");
+            bottomDivText("");
+            PageAdapter.getPage(currentUser.progress)
+              .then((pageInfo) => {
+                let currentPage = new Page(pageInfo);
+                document.querySelector('.center-fit').src = currentPage.imageUrl;
+                document.querySelector('.center-fit').dataset.id = `${currentPage.id}`
+                setTimeout(function() {topDivText(currentPage.topText)}, 2000);
+                setTimeout(function() {bottomDivText(currentPage.bottomText)}, 4000);
+              }) // PageAdapter
+            fetch(`http://localhost:3000/users/${currentUser.id}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: JSON.stringify({
+                "progress": currentUser.progress
+              })
+            }) // end of fetch
+            .catch((error) => {
+              console.log(error)
+            })
+          }
+        }) //nxtbtn event listener
       })
     }
   })
