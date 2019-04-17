@@ -6,12 +6,16 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="p5.js"></script>
     <script src="addons/p5.dom.js"></script>
-    <script type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
     <div id="main-wrapper">
       <div id="main-container" class="imgbox">
-          <img class="center-fit" src='./images/cover.png'>
+        <div id="overlay">
+          <p id="overlay-p"></p>
+          <button type="button" name="button" id="overlay-button-1"></button>
+          <button type="button" name="button" id="overlay-button-2"></button>
+        </div>
+          <img class="center-fit" src='./images/cover.png' data-id="1">
           <div id="top-caption"></div>
         <div id="bottom-caption"></div>
       </div>
@@ -22,5 +26,8 @@
   <!-- fallback for non supporting browsers goes here -->
       <p>Your browser does not support HTML5 audio :-(</p>
     </audio>
+    <script type="text/javascript" src="src/pageAdapter.js"></script>
+    <script type="text/javascript" src="src/page.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>
