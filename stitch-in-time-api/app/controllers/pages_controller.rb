@@ -3,4 +3,11 @@ class PagesController < ApplicationController
     @pages = Page.all
     render json: @pages
   end
+
+  def show
+    @page = Page.find(params[:id])
+
+    render json: @page
+  end
+
 end
