@@ -37,8 +37,9 @@ function makeQuiz(question, answer1, answer2) {
   document.querySelector("#overlay-p").textContent = question;
   document.querySelector("#overlay-button-1").textContent = answer1;
   document.querySelector("#overlay-button-2").textContent = answer2;
+  document.querySelector("#overlay-button-1").style.display = "block";
+  document.querySelector("#overlay-button-2").style.display = "block";
 }
-
 
 //functions to build timers on diplays //
 function displayTopText(topText, time = 1000) {
@@ -84,6 +85,11 @@ function populateNavBtn(navbtn) {
                       </ul>`
 };
 
+//click sound//
+function playSound() {
+          var sound = document.querySelector("#click-sound");
+          sound.play();
+      }
 
 //////////////// ***********Main flow of app once DOM is loaded***********////////////
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -138,6 +144,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displayNavButton();
 
         nxtBtn.addEventListener('click', (event) => {
+          playSound();
           resetFadeInImage();
           ///End of line////
           if (currentUser.progress === lastPage) {
@@ -240,6 +247,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         /// Back Button functionality ///////
         backBtn.addEventListener('click', (event) => {
+          playSound();
           resetFadeInImage();
           ///Beginning of line////
           if (currentUser.progress === firstPage) {

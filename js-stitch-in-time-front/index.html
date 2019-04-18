@@ -12,10 +12,10 @@
   <body>
     <div id="main-wrapper">
       <div id="main-container" class="imgbox">
-        <div id="overlay">
-          <p id="overlay-p"></p>
-          <button type="button" name="button" id="overlay-button-1"></button>
-          <button type="button" name="button" id="overlay-button-2"></button>
+        <div class="overlay" id="overlay">
+          <span id="overlay-p"></span>
+          <button type="button" name="button" class="waves-effect grey darken-2 btn" id="overlay-button-1"></button>
+          <button type="button" name="button" class="waves-effect grey darken-2 btn" id="overlay-button-2"></button>
         </div>
           <img class="center-fit fade-me-in responsive-image" src='./images/cover.png' data-id="1">
           <div id="top-caption"></div>
@@ -28,6 +28,10 @@
       <source src="sound/114.ogg" type="audio/ogg">
   <!-- fallback for non supporting browsers goes here -->
       <p>Your browser does not support HTML5 audio :-(</p>
+    </audio>
+    <audio id="click-sound">
+      <source src="sound/click_sound.mp3" type="audio/mpeg">
+      <source src="sound/click_sound.ogg" type="audio/ogg">
     </audio>
     <script type="text/javascript" src="src/materialize.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
