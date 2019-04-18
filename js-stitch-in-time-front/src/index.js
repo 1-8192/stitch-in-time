@@ -49,7 +49,7 @@ function displayTopText(topText, time = 1000) {
   }, time);
 }
 
-function displayBottomText(bottomText, time = 2000) {
+function displayBottomText(bottomText, time = 5000) {
   setTimeout(function() {
     bottomDivText(bottomText);
   }, time);
@@ -57,7 +57,7 @@ function displayBottomText(bottomText, time = 2000) {
 
 
 //toggles diplay button on and off //
-function displayNavButton(time = 3000) {
+function displayNavButton(time = 6000) {
   let navBtn = document.querySelector("#nav-button");
   setTimeout(function() {
     navBtn.style.display = "block";
@@ -79,8 +79,9 @@ function populateNavBtn(navbtn) {
   navbtn.innerHTML = `<a class="btn-floating btn-large brown lighten-4 pulse">
                       <i class="small material-icons">adjust</i>
                       </a>
-                      <ul>
+                      <ul class="arrows">
                       <li><a class="btn-floating light-green lighten-3" id="next"><i class="material-icons">arrow_forward</i></a></li>
+
                       <li><a class="btn-floating red lighten-3" id="back"><i class="material-icons">arrow_back</i></a></li>
                       </ul>`
 };
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let currentPage = new Page(pageInfo);
             document.querySelector(".center-fit").src = currentPage.imageUrl;
             displayTopText(currentPage.topText);
-            displayBottomText(currentPage.bottomText, 2000);
+            displayBottomText(currentPage.bottomText);
           })
 
         let navBtn = document.querySelector('#nav-button');
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 document.querySelector('.center-fit').src = currentPage.imageUrl;
                 document.querySelector('.center-fit').dataset.id = `${currentPage.id}`
                 navBtn.style.display = "none"
-                setTimeout(function() {topDivText(currentPage.topText)}, 1000);
+                displayTopText(currentPage.topText);
 
                 // this is where quiz comes in
                 setTimeout(function() {quizOn()}, 2000);
@@ -181,7 +182,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                   if (event.target === button1) {
                     alert('Metal should not be tossed away if it can be avoided, let\'s see if there\'s a better solution!')
                     quizOff();
-                    setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
+                    setTimeout(function() {bottomDivText(currentPage.bottomText)}, 100);
                     displayNavButton();
                   } else if (event.target === button2) {
                     alert('Good instinct! I bet we can fix the iron if we ask the right person.')
@@ -235,7 +236,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let currentPage = new Page(pageInfo);
                 document.querySelector(".center-fit").src = currentPage.imageUrl;
                 displayTopText(currentPage.topText);
-                displayBottomText(currentPage.bottomText, 2000);
+                displayBottomText(currentPage.bottomText);
                 displayNavButton();
               }) // PageAdapter
             UserAdapter.updateProgress(currentUser)
@@ -264,7 +265,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let currentPage = new Page(pageInfo);
                 document.querySelector(".center-fit").src = currentPage.imageUrl;
                 displayTopText(currentPage.topText);
-                displayBottomText(currentPage.bottomText, 2000);
+                displayBottomText(currentPage.bottomText);
                 displayNavButton();
               }) // PageAdapter
             UserAdapter.updateProgress(currentUser)

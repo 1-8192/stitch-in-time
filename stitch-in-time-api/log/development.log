@@ -16366,3 +16366,1609 @@ Processing by PagesController#show as */*
 Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/pages" for ::1 at 2019-04-18 15:35:42 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alessandroallegranzi/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.79ms)
+Completed 200 OK in 64ms (Views: 49.3ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/users" for ::1 at 2019-04-18 15:35:44 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 29ms (Views: 7.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/pages/23" for ::1 at 2019-04-18 15:35:45 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (8.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/pages/24" for ::1 at 2019-04-18 15:35:49 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (2.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:36:39 -0400
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 15:36:39 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>23, "id"=>"18", "user"=>{"progress"=>23}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:36:44 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:38:39 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 15:38:39 -0400
+  [1m[36mPage Load (2.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 2.7ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>23, "id"=>"18", "user"=>{"progress"=>23}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:38:43 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (4.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 4.6ms)
+
+
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 15:41:20 -0400
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:41:20 -0400
+Processing by UsersController#update as JSON
+Processing by PagesController#show as */*
+  Parameters: {"progress"=>23, "id"=>"18", "user"=>{"progress"=>23}}
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:41:24 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:41:30 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.55ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:41:33 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:41:34 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:41:40 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:42:43 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:42:46 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:42:48 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:42:53 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.0ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:44:11 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.7ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:44:14 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:44:15 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:44:19 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.2ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:45:36 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.78ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:45:40 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:45:41 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:45:48 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:54:18 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.92ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:54:22 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:54:23 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:54:27 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (6.2ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:55:14 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.77ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:55:16 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.79ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:55:43 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.19ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:55:57 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:55:58 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 15:56:03 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (1.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 15:56:52 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.73ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 15:57:05 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 15:57:05 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/22" for 127.0.0.1 at 2019-04-18 16:00:41 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"22"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:00:41 -0400
+  [1m[36mPage Load (1.2ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>22, "id"=>"18", "user"=>{"progress"=>22}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 22], ["updated_at", "2019-04-18 20:00:41.070149"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:00:45 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:00:45 -0400
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>23, "id"=>"18", "user"=>{"progress"=>23}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 23], ["updated_at", "2019-04-18 20:00:45.958058"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:00:49 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.56ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:00:52 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:00:53 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:06:01 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.56ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:06:04 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:06:04 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:06:33 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:06:36 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:06:37 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (1.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:07:08 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.18ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:07:10 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:07:11 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 16:07:25 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:07:46 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:07:46 -0400
+  [1m[36mPage Load (2.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 2.9ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>25, "id"=>"18", "user"=>{"progress"=>25}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 25], ["updated_at", "2019-04-18 20:07:46.525843"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/pages/26" for 127.0.0.1 at 2019-04-18 16:07:55 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"26"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:07:55 -0400
+  [1m[36mPage Load (4.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+Processing by UsersController#update as JSON
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+  Parameters: {"progress"=>26, "id"=>"18", "user"=>{"progress"=>26}}
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 26], ["updated_at", "2019-04-18 20:07:55.775961"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:10:30 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/26" for 127.0.0.1 at 2019-04-18 16:10:31 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"26"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:10:41 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:10:41 -0400
+  [1m[36mPage Load (1.2ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>25, "id"=>"18", "user"=>{"progress"=>25}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 25], ["updated_at", "2019-04-18 20:10:41.891815"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 16:10:47 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:10:47 -0400
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>24, "id"=>"18", "user"=>{"progress"=>24}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 24], ["updated_at", "2019-04-18 20:10:47.201111"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:10:51 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:10:51 -0400
+  [1m[36mPage Load (11.0ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 14ms (Views: 1.1ms | ActiveRecord: 11.0ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>23, "id"=>"18", "user"=>{"progress"=>23}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 23], ["updated_at", "2019-04-18 20:10:51.193278"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:12:55 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.17ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:12:58 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/23" for 127.0.0.1 at 2019-04-18 16:12:58 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 16:13:03 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mPage Load (4.2ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:13:12 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:13:12 -0400
+  [1m[36mPage Load (2.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+Processing by UsersController#update as JSON
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+  Parameters: {"progress"=>25, "id"=>"18", "user"=>{"progress"=>25}}
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 25], ["updated_at", "2019-04-18 20:13:12.597966"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/pages/26" for 127.0.0.1 at 2019-04-18 16:13:17 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"26"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:13:17 -0400
+  [1m[36mPage Load (1.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Processing by UsersController#update as JSON
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 1.5ms)
+
+
+  Parameters: {"progress"=>26, "id"=>"18", "user"=>{"progress"=>26}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 26], ["updated_at", "2019-04-18 20:13:17.557933"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:13:36 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:13:36 -0400
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>27, "id"=>"18", "user"=>{"progress"=>27}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 27], ["updated_at", "2019-04-18 20:13:36.501966"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:15:09 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (5.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:15:12 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:15:13 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/28" for 127.0.0.1 at 2019-04-18 16:15:26 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"28"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:15:26 -0400
+  [1m[36mPage Load (2.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 2.6ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>28, "id"=>"18", "user"=>{"progress"=>28}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 28], ["updated_at", "2019-04-18 20:15:26.461968"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:16:35 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.88ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:16:39 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/28" for 127.0.0.1 at 2019-04-18 16:16:40 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"28"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (25.49ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:16:49 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:16:49 -0400
+  [1m[36mPage Load (2.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>29, "id"=>"18", "user"=>{"progress"=>29}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 29], ["updated_at", "2019-04-18 20:16:49.191475"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:16:59 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (2.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.27ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:17:02 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:17:02 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:17:16 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:17:21 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"new3", "progress"=>0, "user"=>{"name"=>"new3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "new3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "progress", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "new3"], ["progress", 0], ["created_at", "2019-04-18 20:17:21.647682"], ["updated_at", "2019-04-18 20:17:21.647682"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/pages/22" for 127.0.0.1 at 2019-04-18 16:17:23 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:17:49 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (2.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.53ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:17:53 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:17:54 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:18:06 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (2.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.51ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:18:08 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:18:09 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:18:23 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.92ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:18:25 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:18:26 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:19:29 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (4.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:19:32 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:19:32 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:20:07 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:20:09 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:20:10 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:20:51 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:20:54 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:20:55 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:21:38 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:21:40 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:21:40 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (1.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:21:58 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.16ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:22:01 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:22:02 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:22:11 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.15ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:22:14 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pages/29" for 127.0.0.1 at 2019-04-18 16:22:14 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/28" for 127.0.0.1 at 2019-04-18 16:22:21 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"28"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:22:21 -0400
+  [1m[36mPage Load (4.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 4.5ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>28, "id"=>"18", "user"=>{"progress"=>28}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 28], ["updated_at", "2019-04-18 20:22:21.590173"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:22:28 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:22:28 -0400
+  [1m[36mPage Load (2.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>27, "id"=>"18", "user"=>{"progress"=>27}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 27], ["updated_at", "2019-04-18 20:22:28.557428"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:22:30 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.95ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:22:33 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:22:33 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:23:15 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:23:19 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:23:20 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:23:54 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (9.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:23:56 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:23:57 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:24:15 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:24:17 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:24:34 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.44ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:24:37 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:24:38 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/28" for 127.0.0.1 at 2019-04-18 16:25:38 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"28"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:25:38 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>28, "id"=>"18", "user"=>{"progress"=>28}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 28], ["updated_at", "2019-04-18 20:25:38.102621"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/pages/27" for 127.0.0.1 at 2019-04-18 16:25:42 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPage Load (2.9ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:25:42 -0400
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 2.9ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>27, "id"=>"18", "user"=>{"progress"=>27}}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 27], ["updated_at", "2019-04-18 20:25:42.589957"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/pages/26" for 127.0.0.1 at 2019-04-18 16:25:46 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"26"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:25:46 -0400
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>26, "id"=>"18", "user"=>{"progress"=>26}}
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 26], ["updated_at", "2019-04-18 20:25:46.671851"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 18ms (Views: 0.8ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:25:58 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:25:58 -0400
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.3ms)
+
+
+Processing by UsersController#update as JSON
+  Parameters: {"progress"=>25, "id"=>"18", "user"=>{"progress"=>25}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 25], ["updated_at", "2019-04-18 20:25:58.630521"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:26:36 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.23ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:26:40 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:26:42 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:28:19 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (3.0ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:28:21 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:28:23 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2019-04-18 16:29:36 -0400
+Processing by PagesController#index as */*
+  [1m[36mPage Load (3.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/controllers/pages_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.94ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-18 16:29:39 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"New3", "progress"=>0, "user"=>{"name"=>"New3", "progress"=>0}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "New3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/pages/25" for 127.0.0.1 at 2019-04-18 16:29:41 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/24" for 127.0.0.1 at 2019-04-18 16:29:51 -0400
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"24"}
+Started PATCH "/users/18" for 127.0.0.1 at 2019-04-18 16:29:51 -0400
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:8
+Processing by UsersController#update as JSON
+[active_model_serializers] Rendered PageSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+  Parameters: {"progress"=>24, "id"=>"18", "user"=>{"progress"=>24}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Unpermitted parameters: :id, :user
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "progress" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["progress", 24], ["updated_at", "2019-04-18 20:29:51.760783"], ["id", 18]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 3.7ms)
+
+

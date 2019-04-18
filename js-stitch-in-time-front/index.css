@@ -34,23 +34,23 @@ img {
 }
 
 #top-caption {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
   background-color: rgb(211, 211, 211, .4);
   position: fixed;
-  top: 20%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-  font-size: medium;
+  top: 25%;
+  font-size: 25px;
 }
 
 #bottom-caption {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
   background-color: rgb(211, 211, 211, .4);
   position: fixed;
-  top: 90%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-  font-size: medium;
+  top: 70%;
+  font-size: 25px;
 }
 
 .overlay {
@@ -71,18 +71,23 @@ img {
     padding: 5px;
     border-radius: 5px;
     color: #000;
+    text-align: center;
     background-color: #fff;
-    position:relative;
-    top:50%;
+    position: absolute;
+    top:40%;
+    left: 30%;
+    right: 30%;
 }
 
 #overlay-button-1 {
   padding: 5px;
   border-radius: 5px;
   color: #000;
+  text-align: center;
   background-color: #fff;
-  position:relative;
-  top:50%;
+  position: absolute;
+  top:60%;
+  left: 35%;
 }
 
 #overlay-button-2 {
@@ -90,8 +95,10 @@ img {
   border-radius: 5px;
   color: #000;
   background-color: #fff;
-  position:relative;
-  top:50%;
+  text-align: center;
+  position: absolute;
+  top:70%;
+  left: 26%;
 }
 
 .fade-me-in {
@@ -110,4 +117,9 @@ img {
 
 .fixed-action-btn {
   display: none;
+  top: 50%;
 }
+
+.arrows {
+  top: -28%;
+};
