@@ -3,6 +3,15 @@ let currentUser = "";
 let firstPage;
 let lastPage;
 
+//Sets up the divTag for the welcome page//
+function populateDivTag(divTag) {
+  divTag.className = 'greeting'
+  divTag.innerHTML = `<p>Welcome</p>
+  <input type="text">Hi! What's your name?</input>
+  <a class="waves-effect grey darken-2 btn" id="start-btn">Let's read!</a>`
+};
+
+
 // toggles overlay for questions and final message //
 function quizOn() {
   document.getElementById("overlay").style.display = "block";
@@ -11,6 +20,7 @@ function quizOn() {
 function quizOff() {
   document.getElementById("overlay").style.display = "none";
 }
+
 
 //functions to populate story text on page //
 function topDivText(text) {
@@ -21,12 +31,14 @@ function bottomDivText(text) {
   document.querySelector("#bottom-caption").innerHTML = `<p>${text}</p>`;
 };
 
+
 //function to populate quiz divs //
 function makeQuiz(question, answer1, answer2) {
   document.querySelector("#overlay-p").textContent = question;
   document.querySelector("#overlay-button-1").textContent = answer1;
   document.querySelector("#overlay-button-2").textContent = answer2;
 }
+
 
 //functions to build timers on diplays //
 function displayTopText(topText, time = 1000) {
@@ -42,6 +54,7 @@ function displayBottomText(bottomText, time = 2000) {
   }, time);
 }
 
+
 //toggles diplay button on and off //
 function displayNextButton(time = 3000) {
   let nxtbtn = document.querySelector(".next-button");
@@ -49,6 +62,7 @@ function displayNextButton(time = 3000) {
     nxtbtn.style.display = "block";
   }, time);
 }
+
 
 // functions for fading in and out images
 function resetFadeInImage() {
@@ -59,7 +73,8 @@ function fadeInImage() {
   document.querySelector(".center-fit").classList.add("fade-me-in")
 }
 
-//Main flow of app once DOM is loaded //
+
+//////////////// ***********Main flow of app once DOM is loaded***********////////////
 document.addEventListener('DOMContentLoaded', (event) => {
   const containerTag = document.querySelector('#main-container')
   const divTag = document.createElement("DIV");
@@ -67,10 +82,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let button1 = document.querySelector("#overlay-button-1");
   let button2 = document.querySelector("#overlay-button-2");
   containerTag.appendChild(divTag)
-  divTag.className = 'greeting'
-  divTag.innerHTML = `<p>Welcome</p>
-  <input type="text">Hi! What's your name?</input>
-  <input id="start-btn" type="button" value="Let's Read!"></input>`
+  populateDivTag(divTag);
 
   //Find the first and last id's of the Pages //
   PageAdapter.getAll()
@@ -79,6 +91,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       firstPage = allPages[0].id
       lastPage = allPages[indexOfLastPage].id
     })
+
 
  //click event to sign user in and start telling story //
   document.querySelector('#start-btn').addEventListener('click', (e) => {
@@ -95,6 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         alert(`Welcome, ${currentUser.name}!`)
         document.querySelector('.greeting').remove();
+
 
         //Loads first page of story //
         PageAdapter.getPage(currentUser.progress)
@@ -113,6 +127,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displayNextButton();
 
         nxtbtn.addEventListener('click', (event) => {
+
           ///End of line////
           if (currentUser.progress === lastPage) {
             topDivText("");
@@ -137,6 +152,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 document.querySelector('.center-fit').dataset.id = `${currentPage.id}`
                 nxtbtn.style.display = "none"
                 setTimeout(function() {topDivText(currentPage.topText)}, 1000);
+
                 // this is where quiz comes in
                 setTimeout(function() {quizOn()}, 2000);
                 let question = "Oh, no! Shyam's in quite the pickle. What should he do? Drop everything and leave with a rumpled shirt, or see if there's any way to repair the clothes iron?";
@@ -158,6 +174,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 })
               }) // PageAdapter
           } else if (currentUser.progress === firstPage + 11) {
+
             //////////////// QUIZ 2 TIME!!!!! /////////////////////
             currentUser.progress += 1;
             topDivText("");
