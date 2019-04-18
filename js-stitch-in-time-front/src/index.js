@@ -30,6 +30,7 @@ function makeQuiz(question, answer1, answer2) {
 
 //functions to build timers on diplays //
 function displayTopText(topText, time = 1000) {
+  fadeInImage();
   setTimeout(function() {
     topDivText(topText);
   }, time);
@@ -47,6 +48,15 @@ function displayNextButton(time = 3000) {
   setTimeout(function() {
     nxtbtn.style.display = "block";
   }, time);
+}
+
+// functions for fading in and out images
+function resetFadeInImage() {
+  document.querySelector(".center-fit").classList.remove("fade-me-in")
+}
+
+function fadeInImage() {
+  document.querySelector(".center-fit").classList.add("fade-me-in")
 }
 
 //Main flow of app once DOM is loaded //
@@ -73,6 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
  //click event to sign user in and start telling story //
   document.querySelector('#start-btn').addEventListener('click', (e) => {
     event.preventDefault();
+    resetFadeInImage();
     if (e.target.previousElementSibling.value != "") {
       UserAdapter.postUser(e.target.previousElementSibling.value)
         .then((response) => {
@@ -163,7 +174,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let question = "Wow, another pickle! What should our boy Shyam do, try to fix the broken tire tube, or just buy a new one? ";
                 let answer1 = "Rubber pollutes, if we can fix the tire, it would be better";
                 let answer2 = "New tires are cheap, let's buy one and forget the old one!";
-                makeQuiz(question, answer1, answer2);
+                makeQuiz(question, answer1, answer2);w
                 document.querySelector("#overlay").addEventListener('click', (event) => {
                   if (event.target === button1) {
                     alert('Oh yeah! I bet we can fix this issue, too.')
