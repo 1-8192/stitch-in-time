@@ -87,8 +87,8 @@ function populateNavBtn(navbtn) {
 };
 
 //click sound//
-function playSound() {
-          var sound = document.querySelector("#click-sound");
+function playSound(name) {
+          var sound = document.querySelector(`${name}`);
           sound.play();
       }
 
@@ -138,6 +138,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let currentPage = new Page(pageInfo);
             document.querySelector(".center-fit").src = currentPage.imageUrl;
             displayTopText(currentPage.topText);
+            let topSound = new Audio("sound/page_1_top.mp3");
+            topSound.play();
+            setTimeout(function() {
+              let botSound = new Audio("sound/page_1_bottom.mp3");
+              botSound.play();
+            }, 5500);
             displayBottomText(currentPage.bottomText);
           })}, 3000);
 
@@ -149,7 +155,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displayNavButton();
 
         nxtBtn.addEventListener('click', (event) => {
-          playSound();
+          playSound("#click-sound");
           resetFadeInImage();
           ///End of line////
           if (currentUser.progress === lastPage) {
@@ -284,7 +290,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         /// Back Button functionality ///////
         backBtn.addEventListener('click', (event) => {
-          playSound();
+          playSound("#click-sound");
           resetFadeInImage();
           ///Beginning of line////
           if (currentUser.progress === firstPage) {
