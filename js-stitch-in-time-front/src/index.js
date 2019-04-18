@@ -94,6 +94,7 @@ function playSound() {
 
 //////////////// ***********Main flow of app once DOM is loaded***********////////////
 document.addEventListener('DOMContentLoaded', (event) => {
+  quizOff();
   const containerTag = document.querySelector('#main-container')
   const divTag = document.createElement("DIV");
   let imgTag = document.querySelector('.center-fit')
@@ -124,18 +125,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (currentUser.progress === 0) {
           currentUser.progress = firstPage;
         }
-        alert(`Welcome, ${currentUser.name}!`)
         document.querySelector('.greeting').remove();
-
+        document.querySelector("#overlay-p").textContent = `welcome, ${currentUser.name}!`;
+        quizOn();
+        button1.style.display = "none";
+        button2.style.display = "none";
 
         //Loads first page of story //
-        PageAdapter.getPage(currentUser.progress)
+        setTimeout(function() {PageAdapter.getPage(currentUser.progress)
           .then((pageInfo) => {
+            quizOff();
             let currentPage = new Page(pageInfo);
             document.querySelector(".center-fit").src = currentPage.imageUrl;
             displayTopText(currentPage.topText);
             displayBottomText(currentPage.bottomText);
-          })
+          })}, 3000);
 
         let navBtn = document.querySelector('#nav-button');
         populateNavBtn(navBtn);
@@ -152,10 +156,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             topDivText("");
             bottomDivText("");
             navBtn.innerHML = "";
-            document.querySelector('#overlay-p').textContent = "Thanks for reading! Keep conserving and repairing items to save our planet!";
+            ocument.querySelector("#overlay-p").textContent = `Thanks for reading! Keep recylcing!`;
             quizOn();
-            document.querySelector('#overlay-button-1').style.display = "none";
-            document.querySelector('#overlay-button-2').style.display = "none";
+            button1.style.display = "none";
+            button2.style.display = "none";
             currentUser.progress = firstPage;
             UserAdapter.updateProgress(currentUser);
           } else if (currentUser.progress === firstPage + 1) {
@@ -179,12 +183,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let answer2 = "There must be a way to fix the problem, let's work on it together!";
                 makeQuiz(question, answer1, answer2);
                 document.querySelector("#overlay").addEventListener('click', (event) => {
-                  if (event.target === button1) {
+                  if (event.target === button1 && (currentUser.progress-1) === firstPage + 1) {
                     alert('Metal should not be tossed away if it can be avoided, let\'s see if there\'s a better solution!')
                     quizOff();
                     setTimeout(function() {bottomDivText(currentPage.bottomText)}, 100);
                     displayNavButton();
-                  } else if (event.target === button2) {
+                  } else if (event.target === button2 && (currentUser.progress-1) === firstPage + 1) {
                     alert('Good instinct! I bet we can fix the iron if we ask the right person.')
                     quizOff();
                     setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
@@ -212,19 +216,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let answer2 = "New tires are cheap, let's buy one and forget the old one!";
                 makeQuiz(question, answer1, answer2);
                 document.querySelector("#overlay").addEventListener('click', (event) => {
-                  if (event.target === button1) {
+                  if (event.target === button1 && (currentUser.progress-1) === firstPage + 11) {
                     alert('Oh yeah! I bet we can fix this issue, too.')
                     quizOff();
                     setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
                     displayNavButton();
-                  } else if (event.target === button2) {
+                  } else if (event.target === button2 && (currentUser.progress-1) === firstPage + 11) {
                     alert('New tires might be cheap, but throwing old ones away costs a lot for the ecology.')
                     quizOff();
                     setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
                     displayNavButton();
                   }
                 })
-              }) // PageAdapter
+              })
+          } else if (currentUser.progress === firstPage + 18) {
+            ////QUIZ 3 TIME /////
+            currentUser.progress += 1;
+            topDivText("");
+            bottomDivText("");
+            PageAdapter.getPage(currentUser.progress)
+              .then((pageInfo) => {
+                let currentPage = new Page(pageInfo);
+                document.querySelector('.center-fit').src = currentPage.imageUrl;
+                document.querySelector('.center-fit').dataset.id = `${currentPage.id}`
+                setTimeout(function() {topDivText(currentPage.topText)}, 1000);
+                // this is where quiz comes in
+                setTimeout(function() {quizOn()}, 2000);
+                navBtn.style.display = "none"
+                let question = "Why do you think it's so important to recycle?";
+                let answer1 = "Recycling encourages more efficient use of resources and harms the planet less.";
+                let answer2 = "It's not.";
+                makeQuiz(question, answer1, answer2);
+                document.querySelector("#overlay").addEventListener('click', (event) => {
+                  if (event.target === button1 && (currentUser.progress-1) === firstPage + 18) {
+                    alert("Right on! Let\'s keep recycling!")
+                    quizOff();
+                    setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
+                    displayNavButton();
+                  } else if (event.target === button2 && (currentUser.progress-1) === firstPage + 18) {
+                    alert('It may not seem important, but our actions have big effects on the planet.')
+                    quizOff();
+                    setTimeout(function() {bottomDivText(currentPage.bottomText)}, 1000);
+                    displayNavButton();
+                  }
+                })
+              })
           }
           else {
             currentUser.progress += 1;
