@@ -129,3 +129,8 @@ img {
 .arrows {
   top: -28%;
 };
+
+.dropdown-trigger {
+  width: 200px;
+  position: absolute;
+}

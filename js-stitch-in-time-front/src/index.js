@@ -109,12 +109,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
       let indexOfLastPage = allPages.length - 1;
       firstPage = allPages[0].id
       lastPage = allPages[indexOfLastPage].id
+      let counter = 0;
+
+      allPages.forEach((page)=> {
+        counter += 1;
+        document.querySelector('#dropdown1').innerHTML += `
+        <li data-id="${page.id}" class="brown lighten-3">Page ${counter}</li>`;
+      });
     })
 
 
  //click event to sign user in and start telling story //
   document.querySelector('#start-btn').addEventListener('click', (e) => {
     event.preventDefault();
+    document.querySelector('.dropdown-trigger').style.display = "block";
     resetFadeInImage();
     if (e.target.previousElementSibling.value != "") {
       UserAdapter.postUser(e.target.previousElementSibling.value)
@@ -321,5 +329,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   })
 
+  //Table of Contents ///
+
+document.querySelector("#dropdown1").addEventListener('click', function(event) {
+if (event.target.tagName === 'LI') {
+currentUser.progress = event.target.dataset.id;
+topDivText("");
+bottomDivText("");
+document.querySelector('#nav-button').style.display = "none";
+PageAdapter.getPage(event.target.dataset.id)
+  .then((pageInfo) => {
+    let currentPage = new Page(pageInfo);
+    document.querySelector(".center-fit").src = currentPage.imageUrl;
+    displayTopText(currentPage.topText);
+    displayBottomText(currentPage.bottomText, 2000);
+    displayNavButton();
+  }) // PageAdapter
+UserAdapter.updateProgress(currentUser)
+.catch((error) => {
+  console.log(error)
+})
+}
+});
+
+let dropDown = document.querySelectorAll('.dropdown-trigger');
+let instances = M.Dropdown.init(dropDown, {});
 
 }) // end of DOMContentLoaded
