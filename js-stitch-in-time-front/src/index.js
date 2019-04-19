@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let button2 = document.querySelector("#overlay-button-2");
   containerTag.appendChild(divTag)
   populateDivTag(divTag);
+  document.querySelector('.dropdown-trigger').style.display = "none";
 
   //Find the first and last id's of the Pages //
   PageAdapter.getAll()
@@ -121,8 +122,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
  //click event to sign user in and start telling story //
   document.querySelector('#start-btn').addEventListener('click', (e) => {
-    event.preventDefault();
-    document.querySelector('.dropdown-trigger').style.display = "block";
+    event.preventDefault();document.querySelector('.dropdown-trigger').style.display = "block";
+    event.preventDefault();document.querySelector('.dropdown-trigger').style.position = "absolute";
     resetFadeInImage();
     if (e.target.previousElementSibling.value != "") {
       UserAdapter.postUser(e.target.previousElementSibling.value)
@@ -333,7 +334,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 document.querySelector("#dropdown1").addEventListener('click', function(event) {
 if (event.target.tagName === 'LI') {
-currentUser.progress = event.target.dataset.id;
+currentUser.progress = parseInt(event.target.dataset.id);
 topDivText("");
 bottomDivText("");
 document.querySelector('#nav-button').style.display = "none";
