@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             topDivText("");
             bottomDivText("");
             navBtn.innerHML = "";
-            ocument.querySelector("#overlay-p").textContent = `Thanks for reading! Keep recylcing!`;
+            document.querySelector("#overlay-p").textContent = `Thanks for reading! Keep recylcing!`;
             quizOn();
             button1.style.display = "none";
             button2.style.display = "none";
