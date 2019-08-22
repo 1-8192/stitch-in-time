@@ -11,9 +11,10 @@ A Stitch in Time is a digital storybook created using Javascript. It runs in the
 #Installation Instructions
 
 1. clone the repository to your local setup.
-2. npm install the dependencies 
-3. Open the index.html file in your browser.
-4. Enjoy!
+2. In the backend directory bundle install the gems, create the DB and migrate seed data. 
+3. Run the rails server backend. 
+4. Open the index.html file from the frontend folder in your browser.
+5. Enjoy!
 
 #Authors
 
