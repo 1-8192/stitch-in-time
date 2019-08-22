@@ -1,24 +1,24 @@
-# README
+# A Stitch in Time Digital Storybook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#OVERVIEW
 
-Things you may want to cover:
+A Stitch in Time is a digital storybook created using Javascript. It runs in the browser, and is based on a public domain children's book of the same title, centered around teaching the importance of recycling and reuse. 
 
-* Ruby version
+#Version
 
-* System dependencies
+0.1.0
 
-* Configuration
+#Installation Instructions
 
-* Database creation
+1. clone the repository to your local setup.
+2. npm install the dependencies 
+3. Open the index.html file in your browser.
+4. Enjoy!
 
-* Database initialization
+#Authors
 
-* How to run the test suite
+Simon Mei and Alessandro Allegranzi
 
-* Services (job queues, cache servers, search engines, etc.)
+#Acknowledgments
 
-* Deployment instructions
-
-* ...
+Thanks to Javascript!
